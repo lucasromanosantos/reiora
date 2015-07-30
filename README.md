@@ -1,4 +1,5 @@
 # reiora
+<<<<<<< HEAD
 my first Love2D game - practicing lua/love and hopefully useful for any other beginner :)
 there`s no objective, just testing player movement and collision
 WASD - player control
@@ -14,5 +15,3 @@ WASD - player control
 LÖVE - https://love2d.org/
 bump - https://github.com/kikito/bump.lua/
 anim8 - hhttps://github.com/kikito/anim8ttps://github.com/kikito/anim8
-
-
