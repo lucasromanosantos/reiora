@@ -3,7 +3,7 @@
 my first Love2D game - practicing lua/love and hopefully useful for any other beginner :) <br />
 there`s no objective, just testing player movement and collision<br />
 
-WASD - player control
+wasd - player control
 
 !!! - since I don`t have much practice with it, please desconsider any problem with the code quality or conventions. thanks
 
@@ -13,4 +13,4 @@ WASD - player control
 ## resources
 LÖVE - https://love2d.org/ <br />
 bump - https://github.com/kikito/bump.lua/ <br />
-anim8 - hhttps://github.com/kikito/anim8ttps://github.com/kikito/anim8 <br />
+anim8 - https://github.com/kikito/anim8
