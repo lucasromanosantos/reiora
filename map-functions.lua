@@ -2,6 +2,13 @@ local bump = require "lib/bump"
 
 local tileW, tileH, tileset, quads, tileTable
 
+
+local function addBlock(x,y,w,h)
+  local block = {x=x, y=y, w=w, h=h, isBlock=true}
+  blocks[#blocks+1] = block
+  world:add(block, x, y, w, h)
+end
+
 function loadMap(path)
   love.filesystem.load(path)()
 end
@@ -33,7 +40,7 @@ function newMap(tileWidth, tileHeight, tilesetPath, tileString, quadInfo)
     for character in row:gmatch(".") do
       tileTable[columnIndex][rowIndex] = character
       if character ~= " " then
-          addBlock(32*(columnIndex-1), 32*(rowIndex-1), 32, 32)
+          addBlock(35*(columnIndex-1), 35*(rowIndex-1), 35, 35)
       end
       columnIndex = columnIndex + 1
     end
@@ -45,13 +52,9 @@ function drawMap()
   for columnIndex,column in ipairs(tileTable) do
     for rowIndex,char in ipairs(column) do
       local x,y = (columnIndex-1)*tileW, (rowIndex-1)*tileH
-      love.graphics.draw(tileset, quads[ char ] , x, y)
+      if char ~= " " then -- MUDAR
+        love.graphics.draw(tileset, quads[ char ] , x, y)
+      end
     end
   end
-end
-
-function addBlock(x,y,w,h)
-  local block = {x=x,y=y,w=w,h=h}
-  blocks[#blocks+1] = block
-  world:add(block, x,y,w,h)
 end
